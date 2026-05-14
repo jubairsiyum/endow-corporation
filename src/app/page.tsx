@@ -17,170 +17,182 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-10">
-      <section className="brut-card p-6 sm:p-8">
-        <h1 className="text-4xl font-black leading-[1.05]">
-          Endow <span className="text-accent">Corporation</span>
-        </h1>
-        <p className="mt-3 text-lg font-bold text-muted">
-          We build learning, technology, and travel experiences—through our
-          subsidiaries.
-        </p>
+      {/* Hero */}
+      <section className="brut-card p-6 sm:p-10">
+        <div className="grid gap-8 md:grid-cols-2 md:items-start">
+          <div>
+            <h1 className="text-4xl font-black leading-[1.05] sm:text-5xl">
+              Endow <span className="text-accent">Corporation</span>
+            </h1>
+            <p className="mt-4 text-lg font-bold text-muted">
+              A mother company building three focused brands: education, technology,
+              and travel—under one consistent Endow standard.
+            </p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link href="/contact" className="brut-button px-5 py-3 font-black">
+                Contact us
+              </Link>
+              <Link
+                href="/education"
+                className="brut-button px-5 py-3 font-black"
+              >
+                Explore brands
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-none border-2 border-border bg-background p-5">
+            <h2 className="text-xl font-black">At a glance</h2>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <div className="brut-card p-4">
+                <div className="text-2xl font-black leading-none">03</div>
+                <div className="mt-1 text-sm font-bold text-muted">
+                  Subsidiaries
+                </div>
+              </div>
+              <div className="brut-card p-4">
+                <div className="text-2xl font-black leading-none">1</div>
+                <div className="mt-1 text-sm font-bold text-muted">
+                  Shared Endow standard
+                </div>
+              </div>
+              <div className="brut-card p-4">
+                <div className="text-2xl font-black leading-none">∞</div>
+                <div className="mt-1 text-sm font-bold text-muted">
+                  Support mindset
+                </div>
+              </div>
+              <div className="brut-card p-4">
+                <div className="text-2xl font-black leading-none">A→Z</div>
+                <div className="mt-1 text-sm font-bold text-muted">
+                  End-to-end delivery
+                </div>
+              </div>
+            </div>
+            <p className="mt-4 text-sm font-bold text-muted">
+              Clear, scannable information for teams and partners looking for
+              reliable outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Subsidiaries (scannable, not “too many” sections) */}
+      <section className="mt-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="text-2xl font-black">Our subsidiaries</h2>
+          <p className="text-sm font-bold text-muted">
+            Each brand does its core work—Endow Corporation keeps quality aligned.
+          </p>
+        </div>
+
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
           <Link
             href="/education"
-            className="brut-button inline-flex items-center justify-center px-4 py-4 text-center"
+            className="brut-card p-5 transition-transform hover:-translate-y-0.5"
           >
-            <span className="font-black">Endow Global Education</span>
+            <h3 className="text-xl font-black">Endow Global Education</h3>
+            <p className="mt-2 text-sm font-bold text-muted">
+              Learning programs and training experiences built for outcomes.
+            </p>
           </Link>
+
           <Link
             href="/tech"
-            className="brut-button inline-flex items-center justify-center px-4 py-4 text-center"
+            className="brut-card p-5 transition-transform hover:-translate-y-0.5"
           >
-            <span className="font-black">Endow Tech</span>
+            <h3 className="text-xl font-black">Endow Tech</h3>
+            <p className="mt-2 text-sm font-bold text-muted">
+              Technology solutions that turn ideas into dependable systems.
+            </p>
           </Link>
+
           <Link
             href="/travel"
-            className="brut-button inline-flex items-center justify-center px-4 py-4 text-center"
+            className="brut-card p-5 transition-transform hover:-translate-y-0.5"
           >
-            <span className="font-black">Endow Travel</span>
+            <h3 className="text-xl font-black">Endow Travel</h3>
+            <p className="mt-2 text-sm font-bold text-muted">
+              Planning and logistics that help journeys stay smooth.
+            </p>
           </Link>
         </div>
       </section>
 
-      {/* More informative sections */}
-      <section className="mt-6 grid gap-4 md:grid-cols-3">
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">Mission</h2>
-          <p className="mt-2 font-bold text-muted">
-            Build outcomes that matter—through education, dependable technology,
-            and well-organized travel experiences.
-          </p>
-        </div>
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">What we stand for</h2>
-          <p className="mt-2 font-bold text-muted">
-            Clarity, consistency, and real support—so every brand stays aligned to
-            the same Endow standard.
-          </p>
-        </div>
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">How we help</h2>
-          <p className="mt-2 font-bold text-muted">
-            Programs that teach, systems that scale, and planning that reduces
-            friction—end to end.
-          </p>
-        </div>
-      </section>
-
-      <section className="mt-6 grid gap-4 md:grid-cols-3">
-        <div className="brut-card p-5 md:col-span-2">
-          <h2 className="text-xl font-black">Our approach</h2>
-          <p className="mt-2 font-bold text-muted">
-            We connect strategy to delivery. Each subsidiary works on its core,
-            while Endow Corporation ensures shared quality and a consistent
-            experience.
-          </p>
-
-          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+      {/* What Endow Corporation does */}
+      <section className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="brut-card p-6 sm:p-7">
+          <h2 className="text-2xl font-black">How we work</h2>
+          <div className="mt-4 space-y-3">
             <div className="brut-card p-4">
               <h3 className="text-lg font-black">Plan</h3>
               <p className="mt-1 text-sm font-bold text-muted">
-                Goals → roadmaps → measurable outcomes.
+                Define goals, map delivery, and agree on measurable outcomes.
               </p>
             </div>
             <div className="brut-card p-4">
               <h3 className="text-lg font-black">Build</h3>
               <p className="mt-1 text-sm font-bold text-muted">
-                Systems, training, and services that work.
+                Create and support programs, systems, and services that work in
+                real life.
               </p>
             </div>
             <div className="brut-card p-4">
               <h3 className="text-lg font-black">Support</h3>
               <p className="mt-1 text-sm font-bold text-muted">
-                Guidance and improvement—after launch too.
+                Improve continuously—after launch too—so teams stay confident.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">Strengths</h2>
-          <ul className="mt-3 space-y-2 text-sm font-bold text-muted">
-            <li>• Outcome-focused delivery</li>
-            <li>• Cross-brand consistency</li>
-            <li>• Practical, delivery-first solutions</li>
-            <li>• Support that continues</li>
+        <div className="brut-card p-6 sm:p-7">
+          <h2 className="text-2xl font-black">What you get</h2>
+          <ul className="mt-4 space-y-2 text-sm font-bold text-muted">
+            <li>• Outcome-focused delivery across every brand</li>
+            <li>• Cross-brand consistency (same Endow standard)</li>
+            <li>• Practical solutions (no fluff—just delivery)</li>
+            <li>• Ongoing support mindset</li>
           </ul>
+
+          <div className="mt-5 rounded-none border-2 border-border bg-background p-4">
+            <h3 className="text-lg font-black">Next step</h3>
+            <p className="mt-1 text-sm font-bold text-muted">
+              Explore a subsidiary—or message us to collaborate across sectors.
+            </p>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+              <Link href="/contact" className="brut-button px-4 py-3 font-black">
+                Reach out
+              </Link>
+              <Link href="/about" className="brut-button px-4 py-3 font-black">
+                About Endow
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Quick subsidiary recap */}
-      <section className="mt-6 grid gap-4 md:grid-cols-3">
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">Education</h2>
-          <p className="mt-2 font-bold text-muted">
-            Learning programs and training experiences designed for outcomes.
-          </p>
-          <Link href="/education" className="brut-link mt-3 block font-bold">
-            Explore education →
-          </Link>
-        </div>
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">Tech</h2>
-          <p className="mt-2 font-bold text-muted">
-            Technology solutions that turn ideas into dependable systems.
-          </p>
-          <Link href="/tech" className="brut-link mt-3 block font-bold">
-            Explore tech →
-          </Link>
-        </div>
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">Travel</h2>
-          <p className="mt-2 font-bold text-muted">
-            Planning and logistics that help journeys stay smooth.
-          </p>
-          <Link href="/travel" className="brut-link mt-3 block font-bold">
-            Explore travel →
-          </Link>
-        </div>
-      </section>
-
-      {/* Existing section you liked */}
-      <section className="mt-6 grid gap-4 md:grid-cols-3">
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">What we do</h2>
-          <p className="mt-2 font-bold text-muted">
-            Education, technology solutions, and travel services—under one parent
-            brand.
-          </p>
-        </div>
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">Why it matters</h2>
-          <p className="mt-2 font-bold text-muted">
-            Clear expertise across sectors with a consistent Endow standard.
-          </p>
-        </div>
-        <div className="brut-card p-5">
-          <h2 className="text-xl font-black">Next step</h2>
-          <p className="mt-2 font-bold text-muted">
-            Explore each subsidiary, then contact us for collaboration.
-          </p>
-        </div>
-      </section>
-
+      {/* Lightweight CTA */}
       <section className="mt-6 brut-card p-6 sm:p-8">
-        <h2 className="text-2xl font-black">Want to collaborate?</h2>
-        <p className="mt-2 text-lg font-bold text-muted">
-          Tell us what you’re building and we’ll connect you to the right team.
-        </p>
-        <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-          <Link href="/contact" className="brut-button px-5 py-3 font-black text-center">
-            Contact Endow Corporation
-          </Link>
-          <Link href="/about" className="brut-button px-5 py-3 font-black text-center">
-            Learn about us
-          </Link>
+        <div className="grid gap-6 md:grid-cols-2 md:items-center">
+          <div>
+            <h2 className="text-2xl font-black">Want to build together?</h2>
+            <p className="mt-2 text-lg font-bold text-muted">
+              Tell us what you’re working on and we’ll connect you to the right team.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:items-end">
+            <Link
+              href="/contact"
+              className="brut-button w-full px-5 py-3 font-black text-center sm:w-auto"
+            >
+              Contact Endow Corporation
+            </Link>
+            <div className="text-xs font-bold text-muted">
+              This is a starter homepage—content can be expanded page-by-page.
+            </div>
+          </div>
         </div>
       </section>
     </main>
