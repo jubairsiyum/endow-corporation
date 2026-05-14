@@ -30,9 +30,7 @@ export default function ContactPage() {
             <p className="mt-2 font-bold text-muted">
               hello@endowcorporation.com
             </p>
-            <p className="mt-3 text-sm font-bold text-muted">
-              Replace with your real contact email.
-            </p>
+           
           </div>
 
           <div className="brut-card p-5">
