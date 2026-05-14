@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import BrutHero from "../components/BrutHero";
+import ProfessionalHero from "../components/ProfessionalHero";
 
 export const metadata: Metadata = {
-  title: "Endow Corporation",
+  title: "Endow Corporation | Building Futures",
   description:
     "Endow Corporation — parent company of Endow Global Education, Endow Tech, and Endow Travel.",
   alternates: { canonical: "/" },
@@ -16,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <BrutHero />;
+  return <ProfessionalHero />;
 }

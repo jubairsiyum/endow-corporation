@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,29 +25,40 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header className="border-b-2 border-border bg-background">
+    <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4">
-        <a href="/" className="font-black leading-none text-xl">
-          Endow <span className="text-accent">Corporation</span>
-        </a>
+        <Link href="/" className="font-bold text-xl flex items-center gap-2">
+          <span className="inline-block rounded-md bg-accent p-2 text-white">
+            E
+          </span>
+          <span>
+            Endow <span className="text-muted">Corporation</span>
+          </span>
+        </Link>
 
-        <nav aria-label="Primary" className="flex flex-wrap items-center gap-3">
-          <a className="brut-link font-bold" href="/education">
+        <nav aria-label="Primary" className="hidden md:flex items-center gap-6">
+          <Link className="font-semibold text-muted hover:text-foreground transition-colors" href="/education">
             Education
-          </a>
-          <a className="brut-link font-bold" href="/tech">
+          </Link>
+          <Link className="font-semibold text-muted hover:text-foreground transition-colors" href="/tech">
             Tech
-          </a>
-          <a className="brut-link font-bold" href="/travel">
+          </Link>
+          <Link className="font-semibold text-muted hover:text-foreground transition-colors" href="/travel">
             Travel
-          </a>
-          <a className="brut-link font-bold" href="/about">
+          </Link>
+          <Link className="font-semibold text-muted hover:text-foreground transition-colors" href="/about">
             About
-          </a>
-          <a className="brut-link font-bold" href="/contact">
-            Contact
-          </a>
+          </Link>
         </nav>
+
+        <div className="hidden md:flex">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-md bg-accent px-5 py-2 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105"
+          >
+            Contact
+          </Link>
+        </div>
       </div>
     </header>
   );
@@ -54,13 +66,18 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="border-t-2 border-border bg-background">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-6 sm:flex-row sm:items-center sm:justify-between">
-        <div className="text-sm font-bold text-muted">
-          © {new Date().getFullYear()} Endow Corporation
+    <footer className="border-t border-border bg-background">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <Link href="/" className="font-bold text-lg">
+            Endow Corporation
+          </Link>
+          <p className="text-sm text-muted mt-1">
+            Mother company of Endow Global Education, Endow Tech & Endow Travel
+          </p>
         </div>
-        <div className="text-sm font-bold text-muted">
-          Mother company of Endow Global Education, Endow Tech & Endow Travel
+        <div className="text-sm font-medium text-muted">
+          © {new Date().getFullYear()} Endow Corporation. All rights reserved.
         </div>
       </div>
     </footer>
@@ -77,9 +94,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-background">
         <Header />
-        <div className="flex flex-1 flex-col">{children}</div>
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>
